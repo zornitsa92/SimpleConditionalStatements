@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace zadacha18_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double km = double.Parse(Console.ReadLine());
+            string dayTime = Console.ReadLine();
+
+            if (dayTime == "day")
+            {
+                if (km < 20)
+                {
+                    km *= 0.79;
+                    km += 0.70;
+                }
+                else if (km < 100)
+                {
+                    km *= 0.09;
+                }
+                else
+                {
+                    km *= 0.06;
+                }
+            }
+
+            if (dayTime == "night")
+            {
+                if (km < 20)
+                {
+                    km *= 0.90;
+                    km += 0.70;
+                }
+                else if (km < 100)
+                {
+                    km *= 0.09;
+                }
+                else
+                {
+                    km *= 0.06;
+                }
+            }
+            Console.WriteLine(km);
+        }
+    }
+}
