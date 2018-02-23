@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MetricConverter
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double num = double.Parse(Console.ReadLine());
+            string sourse = Console.ReadLine();
+            string output = Console.ReadLine();
+
+            if (sourse == "mm")
+                num /= 1000;
+            if (sourse == "cm")
+                num /= 100;
+            if (sourse == "mi")
+                num /= 0.000621371192;
+            if (sourse == "in")
+                num /= 39.3700787;
+            if (sourse == "km")
+                num /= 0.001;
+            if (sourse == "ft")
+                num /= 3.2808399;
+            if (sourse == "yd")
+                num /= 1.0936133;
+
+            if (output == "mm")
+                num *= 1000;
+            if (output == "cm")
+                num *= 100;
+            if (output == "mi")
+                num *= 0.000621371192;
+            if (output == "in")
+                num *= 39.3700787;
+            if (output == "km")
+                num *= 0.001;
+            if (output == "ft")
+                num *= 3.2808399;
+            if (output == "yd")
+                num *= 1.0936133;
+
+            Console.WriteLine($"{num:f8}");
+
+        }
+    }
+}
