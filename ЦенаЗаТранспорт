@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace zadacha18
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {            
+            double km = double.Parse(Console.ReadLine()); 
+            string dayTime = Console.ReadLine().ToString();
+
+            double taxiStart = 0.70;
+            double taxiDay = 0.79;
+            double taxiNight = 0.90;
+            double Bus = 0.09;
+            double Train = 0.06;
+            
+
+            if (km < 20 && dayTime == "day")
+            {
+                var result = (km * taxiDay) + taxiStart;
+                Console.WriteLine(result);
+            }
+            else if (km < 20 && dayTime == "night")
+            {
+                var result = (km * taxiNight) + taxiStart;
+                Console.WriteLine(result);
+            }
+            else if (km < 100 && km >= 20)
+            {
+                var result = km * Bus;
+                Console.WriteLine(result);
+            }
+            else if (km >= 100)
+            {
+                var result = km * Train;
+                Console.WriteLine(result);
+            }
+            else
+            {
+                Console.WriteLine("Incorrect input");
+            }
+        }
+    }
+}
