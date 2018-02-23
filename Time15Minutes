@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Time15Minutes
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int h = int.Parse(Console.ReadLine());
+            int m = int.Parse(Console.ReadLine());
+
+            m = m + 15;
+
+            if (m > 59)
+            {
+                m = m - 60;
+                h++;
+            }
+            if (h > 23)
+            {
+                h = 0;
+            }
+
+            Console.WriteLine($"{h}:{m:d2}");
+           
+
+        }
+    }
+}
