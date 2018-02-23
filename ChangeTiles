@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ChangeTiles
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double n = double.Parse(Console.ReadLine());
+            double w = double.Parse(Console.ReadLine());
+            double l = double.Parse(Console.ReadLine());
+            double m = double.Parse(Console.ReadLine());
+            double o = double.Parse(Console.ReadLine());
+
+            double area = n * n;
+            double tile = w * l;
+            double bench = m * o;
+
+            double tileQuantity = (area - bench) / tile;
+            double time = tileQuantity * 0.2;
+
+            Console.WriteLine(tileQuantity);
+            Console.WriteLine(time);
+        }
+    }
+}
