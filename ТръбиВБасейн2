@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace zadacha19
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double V = double.Parse(Console.ReadLine());
+            double P1 = double.Parse(Console.ReadLine());
+            double P2 = double.Parse(Console.ReadLine());
+            double H = double.Parse(Console.ReadLine());
+
+            double percent = ((P1 + P2) * H / V) * 100;
+
+            double P1per = (P1 / (P1 + P2)) * 100;
+            double P2per = (P2 / (P1 + P2)) * 100;
+
+            double overflow = ((P1 + P2) * H) - V;
+
+            if (percent <= 100)
+                Console.WriteLine($"The pool is {(int)percent}% full. Pipe 1: {(int)P1per}%. Pipe 2: {(int)P2per}%.");
+            if (percent > 100)
+                Console.WriteLine($"For {H} hours the pool overflows with {overflow:F1} liters.");
+
+        }
+    }
+}
