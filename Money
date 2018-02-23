@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Money
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int bitcoins = int.Parse(Console.ReadLine());
+            double yuans = double.Parse(Console.ReadLine());
+            double commision = double.Parse(Console.ReadLine()) / 100.00;
+
+            double bitcoinToBGN = bitcoins * 1168;
+            double yuanToDollars = yuans * 0.15;
+            double dollarsToBGN = yuanToDollars * 1.76;
+
+            double euro = (bitcoinToBGN + dollarsToBGN) / 1.95;
+
+            double sum = euro - (commision * euro);
+
+            Console.WriteLine(sum);
+            
+        }
+    }
+}
