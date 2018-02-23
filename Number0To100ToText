@@ -1,0 +1,98 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Number0To100ToText
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double num = double.Parse(Console.ReadLine());
+            string firstWord = string.Empty;
+            string secondWord = string.Empty;
+            string spaceWord = string.Empty;
+
+
+            if ((num >= 0) && (num <= 100))
+            {
+                if (num == 0)
+                    secondWord = ("zero");
+                if (num % 10 == 1)
+                    secondWord = "one";
+                else if (num % 10 == 2)
+                    secondWord = "two";
+                else if (num % 10 == 3)
+                    secondWord = "three";
+                else if (num % 10 == 4)
+                    secondWord = "four";
+                else if (num % 10 == 5)
+                    secondWord = "five";
+                else if (num % 10 == 6)
+                    secondWord = "six";
+                else if (num % 10 == 7)
+                    secondWord = "seven";
+                else if (num % 10 == 8)
+                    secondWord = "eight";
+                else if (num % 10 == 9)
+                    secondWord = "nine";
+                else if (num == 10)
+                    secondWord = "ten";
+
+
+                if (num == 11)
+                    secondWord = "eleven";
+                if (num == 12)
+                    secondWord = "twelve";
+                if (num == 13)
+                    secondWord = "thirteen";
+                if (num == 14)
+                    secondWord = "fourteen";
+                if (num == 15)
+                    secondWord = "fifteen";
+                if (num == 16)
+                    secondWord = "sixteen";
+                if (num == 17)
+                    secondWord = "seventeen";
+                if (num == 18)
+                    secondWord = "eighteen";
+                if (num == 19)
+                    secondWord = "nineteen";
+
+
+                if ((int)(num / 10) == 2)
+                    firstWord = "twenty";
+                if ((int)(num / 10) == 3)
+                    firstWord = "thirty";
+                if ((int)(num / 10) == 4)
+                    firstWord = "forty";
+                if ((int)(num / 10) == 5)
+                    firstWord = "fifty";
+                if ((int)(num / 10) == 6)
+                    firstWord = "sixty";
+                if ((int)(num / 10) == 7)
+                    firstWord = "seventy";
+                if ((int)(num / 10) == 8)
+                    firstWord = "eighty";
+                if ((int)(num / 10) == 9)
+                    firstWord = "ninety";
+
+                if (num == 100)
+                    firstWord = "one hundred";
+
+                if ((num > 20) && (num % 10 != 0) && (num < 100))
+                    spaceWord = " ";
+                                
+                Console.WriteLine($"{firstWord}{spaceWord}{secondWord}");
+
+                }
+                else
+                {
+                    Console.WriteLine("invalid number");
+                }
+        
+        }
+    }
+}
