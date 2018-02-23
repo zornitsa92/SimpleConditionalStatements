@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AreaOfFiguress
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string figura = Console.ReadLine();
+
+            double S = 0;
+
+            if (figura == "square")
+            {
+                double a = double.Parse(Console.ReadLine());
+                S = a * a;
+            }
+            else if (figura == "rectangle")
+            {
+                double a = double.Parse(Console.ReadLine());
+                double b = double.Parse(Console.ReadLine());
+                S = a * b;
+            }
+            else if (figura == "circle")
+            {
+                double r = double.Parse(Console.ReadLine());
+                S = Math.PI * Math.Pow(r, 2);
+            }
+            else if (figura == "triangle")
+            {
+                double a = double.Parse(Console.ReadLine());
+                double ha = double.Parse(Console.ReadLine());
+                S = a * ha / 2; 
+            }
+
+            Console.WriteLine(S);
+        }
+    }
+}
